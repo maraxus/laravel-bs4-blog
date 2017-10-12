@@ -37,8 +37,20 @@
         <p class="lead blog-description">An example blog template built with Bootstrap.</p>
       </div>
     </div>
+    
+    <div class="container">
 
-    @yield("content")
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+          @yield("content")
+        </div><!-- /.blog-main -->
+
+        @include('shared.sidebar')
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
 
     <footer class="blog-footer">
       <p>Blog template built for <a href="https://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
