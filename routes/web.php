@@ -13,3 +13,4 @@
 
 Route::get('/', 'PostController@index');
 Route::get('/posts/{post}', 'PostController@show');
+Route::get('/author/{author}/posts', 'AuthorController@showPosts');
