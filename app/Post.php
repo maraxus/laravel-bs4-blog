@@ -9,7 +9,7 @@ class Post extends Model
 {
     //pass a formated, pretty created date
     public function created_time() {
-    	return $this->created_at;
+    	return $this->created_at->format('F j, Y');
     }
 
     public function author() {
