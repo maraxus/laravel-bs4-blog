@@ -3,7 +3,7 @@
 @section('content')
 
       @foreach($posts as $post)
-      	@include('posts.show-partial')
+      	@include('posts.partials.show')
       @endforeach
       @if(count($posts) == 0)
       	<div class="blog-post">
