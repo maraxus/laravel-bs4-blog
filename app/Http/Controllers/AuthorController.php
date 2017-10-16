@@ -9,7 +9,7 @@ class AuthorController extends Controller
 {
     //show all posts from a given author
     public function showPosts(Author $author) {
-    	$posts = $author->posts()->paginate(1);
+    	$posts = $author->posts()->paginate(\Config::get('constants.posts_per_page'));
     	return view('author.showPosts', compact('posts'));
     }
 }

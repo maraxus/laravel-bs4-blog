@@ -10,7 +10,7 @@ class PostController extends Controller
     //fetch all posts
     public function index()
     {
-    	$posts = Post::simplePaginate(1);
+    	$posts = Post::simplePaginate(\Config::get('constants.posts_per_page'));
     	return view('posts.index',compact('posts'));
     }
     //show individual posts
