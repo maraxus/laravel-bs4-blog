@@ -10,7 +10,7 @@ class PostController extends Controller
     //fetch all posts
     public function index()
     {
-    	$posts = Post::all();
+    	$posts = Post::simplePaginate(1);
     	return view('posts.index',compact('posts'));
     }
     //show individual posts
